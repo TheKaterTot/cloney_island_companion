@@ -4,6 +4,18 @@
     <% @users.each do |user| %>
     <li>
     <p>Name: <span class="user-name"><%= user.name %></span></p>
+    <p>Email: <span><%= user.email %></span></p>
+    <p>Reputation: <span class="user-reputation"><%= user.reputation %></span></p>
+    </li>
+    <% end %>
+  </ul>
+</div>
+<div id="banned-users" >
+  <ul>
+    <% @banned_users.each do |user| %>
+    <li>
+    <p>Name: <span class="user-name"><%= user.name %></span></p>
+    <p>Email: <span><%= user.email %></span></p>
     <p>Reputation: <span class="user-reputation"><%= user.reputation %></span></p>
     </li>
     <% end %>

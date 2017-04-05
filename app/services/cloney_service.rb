@@ -6,4 +6,12 @@ class CloneyService
       CloneyUser.new(data)
     end
   end
+
+  def self.banned_users
+    request = Faraday.get('https://pure-wildwood-52964.herokuapp.com/api/v1/users/banned')
+    JSON.parse(request.body).map do |data|
+      CloneyUser.new(data)
+    end
+  end
+
 end

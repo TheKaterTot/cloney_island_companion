@@ -1,0 +1,101 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://pure-wildwood-52964.herokuapp.com/api/v1/users/by_reputation
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 05 Apr 2017 02:07:24 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fa4857f82c884aa8cf35d2398c70001b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5e6917d5-7190-4d34-b78b-3dc6dc132548
+      X-Runtime:
+      - '0.035978'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '[{"id":1003,"name":"Tater","email":"dreadpiratekaty@gmail.com","reputation":1},{"id":2,"name":"Laurel","email":"lelah.stoltenberg@hotmail.com","reputation":0},{"id":3,"name":"Fidel","email":"jannie_schamberger@hotmail.com","reputation":0},{"id":4,"name":"Herman","email":"kathryne@yahoo.com","reputation":0},{"id":5,"name":"Morris","email":"joe@gmail.com","reputation":0},{"id":7,"name":"Bette","email":"bertha.yundt@hotmail.com","reputation":0},{"id":8,"name":"Edna","email":"magnolia@gmail.com","reputation":0},{"id":9,"name":"Nova","email":"kyle_marks@yahoo.com","reputation":0},{"id":10,"name":"Joyce","email":"abdullah@hotmail.com","reputation":0},{"id":11,"name":"Norberto","email":"shana@yahoo.com","reputation":0}]'
+    http_version: 
+  recorded_at: Wed, 05 Apr 2017 02:07:25 GMT
+- request:
+    method: get
+    uri: https://pure-wildwood-52964.herokuapp.com/api/v1/users/banned
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 05 Apr 2017 02:07:25 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"c16332c6f140ca9030fd30fa117875aa"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6bd4b339-54a2-4e88-a97b-f323ab65190e
+      X-Runtime:
+      - '0.010425'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '[{"id":1004,"name":"ryan_2","email":"jabron@jabron.com","reputation":0,"status":"blocked_user"}]'
+    http_version: 
+  recorded_at: Wed, 05 Apr 2017 02:07:26 GMT
+recorded_with: VCR 3.0.3

@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://pure-wildwood-52964.herokuapp.com/api/v1/users/banned
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 05 Apr 2017 02:09:04 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"c16332c6f140ca9030fd30fa117875aa"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ee86c204-0bc4-4404-8035-ed027fa4cb57
+      X-Runtime:
+      - '0.008429'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '[{"id":1004,"name":"ryan_2","email":"jabron@jabron.com","reputation":0,"status":"blocked_user"}]'
+    http_version: 
+  recorded_at: Wed, 05 Apr 2017 02:09:05 GMT
+recorded_with: VCR 3.0.3

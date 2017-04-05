@@ -12,4 +12,8 @@ class CloneyUser
   def reputation
     data["reputation"]
   end
+
+  def email
+    data["email"]
+  end
 end

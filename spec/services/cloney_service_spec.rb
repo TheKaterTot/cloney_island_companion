@@ -9,4 +9,13 @@ describe CloneyService do
       end
     end
   end
+
+  describe ".banned_users" do
+    it "returns all banned users" do
+      VCR.use_cassette("services/banned") do
+        users = CloneyService.banned_users
+        expect(users.count).to eq(1)
+      end
+    end
+  end
 end

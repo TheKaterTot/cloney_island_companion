@@ -1,26 +1,29 @@
-<h1>Welcome to the Cloney Island Dashboard </h1>
-<h3>Top 10 Users by Reputation</h3>
-<div id="users-by-reputation" >
-  <ul>
-    <% @users.each do |user| %>
-    <li>
-    <p>Name: <span class="user-name"><%= user.name %></span></p>
-    <p>Email: <span><%= user.email %></span></p>
-    <p>Reputation: <span class="user-reputation"><%= user.reputation %></span></p>
-    </li>
-    <% end %>
-  </ul>
+<div id="users-by-reputation" class="card" >
+  <div class="col s6">
+    <ul class="collection with-header">
+      <li class="collection-header"><h5>Top 10 Users by Reputation</h5></li>
+      <% @users.each do |user| %>
+      <li class="collection-item">
+      <p>Name: <span class="user-name"><%= user.name %></span></p>
+      <p>Email: <span><%= user.email %></span></p>
+      <p>Reputation: <span class="user-reputation"><%= user.reputation %></span></p>
+      </li>
+      <% end %>
+    </ul>
+  </div>
 </div>
 
-<h3>Banned Users</h3>
 <div id="banned-users" >
-  <ul>
-    <% @banned_users.each do |user| %>
-    <li>
-    <p>Name: <span class="user-name"><%= user.name %></span></p>
-    <p>Email: <span><%= user.email %></span></p>
-    <p>Reputation: <span class="user-reputation"><%= user.reputation %></span></p>
-    </li>
-    <% end %>
-  </ul>
+  <div class="col s6">
+    <ul class="collection with-header">
+      <li class="collection-header"><h5>Banned Users</h5></li>
+      <% @banned_users.each do |user| %>
+      <li class="collection-item">
+      <p>Name: <span class="user-name"><%= user.name %></span></p>
+      <p>Email: <span><%= user.email %></span></p>
+      <p>Reputation: <span class="user-reputation"><%= user.reputation %></span></p>
+      </li>
+      <% end %>
+    </ul>
+  </div>
 </div>

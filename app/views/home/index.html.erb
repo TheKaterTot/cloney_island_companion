@@ -25,23 +25,39 @@
     </ul>
   </div>
 
-  <div id="create-question" class="col s10">
+  <div id="recent-questions" class="col s6 right">
+    <ul class="collection with-header">
+      <li class="collection-header"><h5>Recent Questions</h5></li>
+      <% @recent_questions.each do |question| %>
+      <li class="collection-item">
+      <p>Title: <span class="question-title"><%= question.title %></span></p>
+      <p>Body: <span><%= question.body %></span></p>
+      </li>
+      <div class="divider"></div>
+      <% end %>
+    </ul>
+  </div>
+
+  </div>
+
+  <div id="create-question" class="col m12 s10">
+    <div class="card-panel">
       <%= form_tag new_question_path  do %>
 
-      <%= label_tag :title %>
-      <%= text_field_tag :title %>
+        <%= label_tag :title %>
+        <%= text_field_tag :title %>
 
-      <%= label_tag :body %>
-      <%= text_field_tag :body %>
+        <%= label_tag :body %>
+        <%= text_field_tag :body %>
 
-      <%= label_tag :category_id %>
-      <%= text_field_tag :category_id %>
+        <%= label_tag :category_id %>
+        <%= text_field_tag :category_id %>
 
-      <%= label_tag :user_id %>
-      <%= text_field_tag :user_id %>
+        <%= label_tag :user_id %>
+        <%= text_field_tag :user_id %>
 
-      <%= submit_tag "Create Question", class: "btn btn-large btn-primary" %>
-    <% end %>
-
+        <%= submit_tag "Create Question", class: "btn blue" %>
+      <% end %>
+    </div>
   </div>
 </div>

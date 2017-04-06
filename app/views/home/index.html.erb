@@ -24,4 +24,24 @@
       <% end %>
     </ul>
   </div>
+
+  <div id="create-question" class="col s10">
+      <%= form_tag new_question_path  do %>
+
+      <%= label_tag :title %>
+      <%= text_field_tag :title %>
+
+      <%= label_tag :body %>
+      <%= text_field_tag :body %>
+
+      <%= label_tag :category_id %>
+      <%= text_field_tag :category_id %>
+
+      <%= label_tag :user_id %>
+      <%= text_field_tag :user_id %>
+
+      <%= submit_tag "Create Question", class: "btn btn-large btn-primary" %>
+    <% end %>
+
+  </div>
 </div>
